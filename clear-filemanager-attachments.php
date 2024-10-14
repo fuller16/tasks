@@ -1,5 +1,5 @@
 <?php
-$files=glob('/home/pinpointdev/Dropbox/filemanager/attachments/*');
+$files=glob('/var/www/html/filemanager/attachments/*');
 
 foreach($files as $file){
 	if(is_file($file)){

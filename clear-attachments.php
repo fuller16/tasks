@@ -1,5 +1,5 @@
 <?php
-$files=glob('/home/pinpointdev/Dropbox/onpoint.pinpoint/public/products/quotes/attachments/*');
+$files=glob('/var/www/html/staging-temp/public/products/quotes/attachments/*');
 print_r($files);
 foreach($files as $file){
 	if(is_file($file)) unlink($file);

@@ -1,6 +1,6 @@
 <?php
 
-$host="localhost";$port=3306;$socket="";$user="root";$password="ppos_phpma";$dbname="pinpoint_live";
+$host="onpoint-db.c1i0o2ko6h4g.eu-west-2.rds.amazonaws.com";$port=3306;$socket="";$user="admin";$password="GCG1yB%}v<81<#q1G7!H2AGt-0:A";$dbname="pinpoint_live";
 $con=new mysqli($host, $user, $password, $dbname, $port, $socket) or die ('Could not connect to the database server'.mysqli_connect_error());
 $mem_sql="DELETE FROM `users-mem` WHERE `last-active`<'".(time()-(60*60*24*30*2))."'";
 $quote_email_sql="UPDATE `quote-email` LEFT JOIN `quote` ON (`quote-email`.`quote`=`quote`.`id`) SET `generated`=NULL,`inserted`=NULL,`quote-data`=NULL WHERE `quote`.`id`>'1446' AND `quote`.`time`<'".date("Y-m-d H:i:s",time()-(60*60*24*30*2))."'";
